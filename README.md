@@ -1,7 +1,7 @@
-# 自动发现Mongodb-mongod进程并自动创建监控项
+# 自动发现Mongodb分片集群进程并自动创建监控项
 
 ## 项目说明
-
+本项目是基于 https://github.com/omni-lchen/zabbix-mongodb.git 修改。 
 本项目 zabbix 3.4.15 配置的mongodb shard 集群自动发现监控配置。
 本项目配置完成后会自动发现mongod进程,以端口号作为区分自动创建监控项。
 
