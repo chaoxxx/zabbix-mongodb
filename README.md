@@ -13,7 +13,7 @@ centos7 \ mongodb4.2 \ zabbix 3.4.15
 ## 下载本项目
 
 ```
-
+git clone https://github.com/chaoxxx/zabbix-mongodb.git
 cd zabbix-mongodb
 ```
 
@@ -27,11 +27,15 @@ user=root
 password=111111
 ```
 
-用户名密码设置完成之后请把 文件用户修改为zabbix
+修改文件用户和权限
 
 ```
 chown zabbix:zabbix config.properties
 chmod 600 config.properties
+chown zabbix:zabbix *.py
+chown zabbix:zabbix *.sh
+chmod 700 *.py
+chmod 700 *.sh
 ```
 
 >本监控脚本默认认为`config.properties`中配置的用户 是 在所有的mongod中都存在。
@@ -52,7 +56,6 @@ yum install zabbix-sender
 ### 安装python脚本依赖
 
 ```
-
 pip install -r requirements.txt
 ```
 
