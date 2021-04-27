@@ -1,0 +1,8 @@
+certifi==2020.12.5
+chardet==4.0.0
+idna==2.10
+pymongo==3.11.3
+pyzabbix==0.8.2
+requests==2.25.1
+urllib3==1.26.4
+ZabbixSender==0.2.7
