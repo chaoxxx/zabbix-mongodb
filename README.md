@@ -24,7 +24,7 @@ cd zabbix-mongodb
 ```
 [MONGODB]
 user=root
-password=EJLY9pFodlUFuOd1
+password=111111
 ```
 
 用户名密码设置完成之后请把 文件用户修改为zabbix
