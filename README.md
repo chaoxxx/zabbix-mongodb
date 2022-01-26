@@ -77,6 +77,17 @@ cp mongodb*.sh /usr/local/bin
 cp userparameter_mongodb.conf /etc/zabbix/zabbix_agentd.d
 chown zabbix:zabbix /usr/local/bin/*
 ```
+
+## selinux 安全策略设置
+
+```
+ausearch -c 'zabbix_agentd' --raw | audit2allow -M my-zabbixagentd
+semodule -i my-zabbixagentd.pp
+
+ausearch -c 'sh' --raw | audit2allow -M my-sh
+semodule -i my-sh.pp
+```
+
 ## 重启zabbix-agent
 
 ```
