@@ -86,6 +86,9 @@ semodule -i my-zabbixagentd.pp
 
 ausearch -c 'sh' --raw | audit2allow -M my-sh
 semodule -i my-sh.pp
+
+setenforce 0
+
 ```
 
 ## 重启zabbix-agent
