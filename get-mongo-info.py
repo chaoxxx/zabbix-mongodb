@@ -43,7 +43,7 @@ class MongoDB(object):
                     sys.exit(-1)
             else:
                 try:
-                    url = 'mongodb://%s:%s@%s:%s/?connectTimeoutMS=300;socketTimeoutMS=300' % (
+                    url = 'mongodb://%s:%s@%s:%s' % (
                     self.mongo_user, self.mongo_password, self.mongo_host, self.mongo_port)
                     self.__conn = MongoClient(url,serverSelectionTimeoutMS=3000)
                     self.__conn.list_database_names()
